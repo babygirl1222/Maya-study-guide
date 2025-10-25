@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Maya's Dispatcher Hub</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#1a1334">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="topHeader" class="fade-header">
+    <div class="brand">🚓 Maya's Hub</div>
+    <div class="tag">Calm • Clear • Ready</div>
+  </header>
+  <div id="welcomeBanner" class="banner">🚓 <strong>Welcome Maya — Let's Get You Dispatcher Ready!</strong> 💜</div>
+  <main class="container card">
+    <h1 class="title">Maya's Dispatcher Hub</h1>
+    <p class="subtitle">Warm, calm, and made with love for your dispatcher journey.</p>
+    <nav class="tabs" role="tablist" aria-label="Sections">
+      <button class="tab active" data-target="decks">Study Decks</button>
+      <button class="tab" data-target="quizzes">Quizzes</button>
+      <button class="tab" data-target="reflections">Reflections</button>
+      <button class="tab" data-target="streak">Streak</button>
+    </nav>
+    <section id="decks" class="panel show">
+      <div class="deck-list">
+        <a class="btn" href="assets/Dispatcher_Deck1_Basics_and_Call_Flow.pdf" target="_blank">Open Deck 1 (Basics & Call Flow)</a>
+        <a class="btn" href="assets/Dispatcher_Deck2_Radio_Procedures.pdf" target="_blank">Open Deck 2 (Radio Procedures)</a>
+        <a class="btn" href="assets/Dispatcher_Deck3_Geography_and_Jurisdiction.pdf" target="_blank">Open Deck 3 (Geography & Jurisdiction)</a>
+        <a class="btn" href="assets/Dispatcher_Deck4_Legal_and_Documentation.pdf" target="_blank">Open Deck 4 (Legal & Documentation)</a>
+        <a class="btn" href="assets/Dispatcher_Deck5_Practice_Scenarios.pdf" target="_blank">Open Deck 5 (Practice Scenarios)</a>
+        <a class="btn" href="assets/Dispatcher_Deck6_Exam_Review.pdf" target="_blank">Open Deck 6 (Exam Review)</a>
+      </div>
+    </section>
+    <section id="quizzes" class="panel">
+      <h2 class="section-title">Dispatcher Quizzes</h2>
+      <div class="quiz-controls">
+        <label>Choose a quiz:</label>
+        <select id="quizSelect">
+          <option value="q1">Quiz 1 (Decks 1 & 2)</option>
+          <option value="q2">Quiz 2 (Decks 3 & 4)</option>
+          <option value="q3">Quiz 3 (Decks 5 & 6)</option>
+        </select>
+        <button id="startQuiz" class="pill">Start</button>
+      </div>
+      <div id="quizArea" class="quiz-area hidden">
+        <div id="quizMeta" class="quiz-meta">Question <span id="qIndex">1</span> of <span id="qTotal">10</span></div>
+        <div id="qText" class="q-text"></div>
+        <div id="choices" class="choices"></div>
+        <div class="quiz-actions">
+          <button id="nextBtn" class="pill">Next</button>
+          <button id="finishBtn" class="pill ghost hidden">Finish</button>
+        </div>
+      </div>
+      <div id="quizResult" class="quiz-result hidden">Your score: <span id="score">0</span> out of <span id="scoreTotal">10</span></div>
+    </section>
+    <section id="reflections" class="panel">
+      <h2 class="section-title">Reflections</h2>
+      <p class="muted">A calm thought will rotate every few seconds.</p>
+      <div id="reflectionCard" class="reflection-card">You showed up for yourself today — that is enough.</div>
+    </section>
+    <section id="streak" class="panel">
+      <h2 class="section-title">Study Streak</h2>
+      <p class="muted">Open a deck or take a quiz each day to add to your streak.</p>
+      <div class="streak-box">Days studied: <strong id="streakDays">0</strong></div>
+      <button id="markMinuteBtn" class="pill">Mark study minute</button>
+    </section>
+    <footer class="footer"><p>Built just for you, Maya. Keep going — tiny reps count.</p></footer>
+  </main>
+  <svg class="corner-heart" viewBox="0 0 100 90" aria-hidden="true">
+    <path d="M50 80 C20 60 5 45 5 28 a20 20 0 0 1 38-8 a20 20 0 0 1 38 8 c0 17-15 32-31 44z"/>
+  </svg>
+  <script src="app.js"></script>
+</body></html>
